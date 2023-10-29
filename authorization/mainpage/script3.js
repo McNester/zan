@@ -43,6 +43,19 @@ function get_context(input_question) {
     return contexts[matched_index];
 }
 
+var indexTexEffect = 0;
+txt = ""
+var speed = 50;
+
+function typeWriter() {
+    
+  if (indexTexEffect < txt.length) {
+    document.getElementById("responseOutput").innerHTML += txt.charAt(indexTexEffect);
+    indexTexEffect++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
 
 
 
@@ -56,12 +69,18 @@ function fetchData() {
 
     axios.post(url, data)
         .then(response => {
-            document.getElementById('responseOutput').textContent = JSON.stringify(response.data[0][0].slice(1,-1), null, 2);
+            answer = JSON.stringify(response.data[0][0], null, 2);
+            //document.getElementById('responseOutput').textContent = JSON.stringify(response.data[0][0].slice(1,-1), null, 2);
+            document.getElementById('responseOutput').textContent = ""
+            txt = answer.slice(1,-1)
+            typeWriter();
+            indexTexEffect = 0;
+            
         })
         .catch(error => {
             console.error("Error:", error);
         });
-    document.getElementById('questionInput').value = "";
+
 }
 
 
