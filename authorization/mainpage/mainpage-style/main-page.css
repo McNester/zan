@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    
+    width: 100%;
+    max-width: 100%;
+}
+
+header{
+    padding-top: 1rem;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+}
+.logo{
+    margin-left: 45%;
+    margin-right: 45%;
+}
+.logo img{
+    width: 150px;
+    height: 150px;
+}
+
+main{
+    padding: 10% 30%;
+}
+
+.contentBlock{
+    width: 700px;
+    max-width: 100%;
+    height: 400px;
+    max-height: 70%;
+    background-color: rgb(255, 255, 255);
+}
+
+.InputPart{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 50px;    
+}
+
+.InputPart button{
+    height: 40px;
+    width: 50px;
+}
+.InputPart button img{
+    width: 100%;
+}
+.InputPart .InputText{
+    width: 36%;
+}
+
+
+.LinkBackBlock{
+    display: flex;
+}
+
+.LinkBack{
+    text-align: center;
+    top: 5%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: bold;
+    background-color: #708AA7;
+    transition: all 300ms;
+    text-decoration: none;
+    border-radius: 5px;
+    left: 5%;      
+    position: absolute;      
+}

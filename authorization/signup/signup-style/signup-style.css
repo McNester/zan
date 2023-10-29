@@ -1,0 +1,114 @@
+body{
+    left: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    background: #0B1116;
+}
+main{
+    padding-top: 5%;
+    padding-left: 30%;
+    padding-right: 30%;
+    /* padding-bottom: ; */
+}
+.container{
+    width: 37.5rem;
+    max-width: 600px;
+    background-color: #2F3C4C;
+    border-radius: 15%;
+    display: block;
+}
+
+.container .logo{
+    width: 180px;
+    height: 180px;
+    max-width: 180px;
+    max-height: 180px;
+    margin: auto;
+}
+.logo img{
+    width: 100%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 10% 20%;
+    padding-top: 0;
+}
+.NameBlock{
+    font-size: 2.5rem;
+    color: #ffff;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding-bottom: 1.3rem;
+}
+.inputData{
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: medium;
+    margin-top: 1rem;
+    border-radius: 10px;
+    background-color: #2F3C4C;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+form button{
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: bold;
+    background-color: #708AA7;
+    transition: all 300ms;
+}
+form button:hover{
+    background-color: #2F3C4C;
+}
+
+.LinkReg{
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: bold;
+    background-color: #708AA7;
+    transition: all 300ms;
+    text-decoration: none;
+}
+
+.LinkBackBlock{
+    display: flex;
+}
+
+.LinkBack{
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: bold;
+    background-color: #708AA7;
+    transition: all 300ms;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 40%;             
+}
+
+
+.LinkReg, .LinkBack:hover{
+    background-color: #2F3C4C;
+}
+
+.LinkBack{
+    
+}
