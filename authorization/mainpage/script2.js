@@ -1,4 +1,4 @@
-//import * as natural from '/Users/serafimbronnikov/Downloads/zan-ai/authorization/natural2/lib/index.js';
+import * as natural from '../../authorization/natural2';
 
 
 
