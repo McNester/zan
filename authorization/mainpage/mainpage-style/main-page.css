@@ -3,7 +3,9 @@ body{
     
     width: 100%;
     max-width: 100%;
+
 }
+
 
 header{
     padding-top: 1rem;
@@ -69,4 +71,30 @@ main{
     border-radius: 5px;
     left: 5%;      
     position: absolute;      
+}
+
+
+
+#responseContainer {
+    display: flex;
+    width: 70vw;
+    position: fixed;
+    margin-left: -16vw;
+    margin-top: -40vh;
+    align-content: center;
+    
+   
+    padding: 1rem;
+}
+
+
+#responseOutput{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    text-align: center;
+
 }

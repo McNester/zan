@@ -56,11 +56,12 @@ function fetchData() {
 
     axios.post(url, data)
         .then(response => {
-            document.getElementById('responseOutput').textContent = JSON.stringify(response.data[0][0], null, 2);
+            document.getElementById('responseOutput').textContent = JSON.stringify(response.data[0][0].substring(1, responsetext.length - 1), null, 2);
         })
         .catch(error => {
             console.error("Error:", error);
         });
+    document.getElementById('questionInput').value = "";
 }
 
 
