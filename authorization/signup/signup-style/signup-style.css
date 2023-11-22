@@ -7,7 +7,7 @@ body{
     background: #0B1116;
 }
 main{
-    padding-top: 5%;
+    padding-top: 1%;
     padding-left: 30%;
     padding-right: 30%;
     /* padding-bottom: ; */
@@ -111,4 +111,8 @@ form button:hover{
 
 .LinkBack{
     
+}
+
+#responseContainer{
+    display: none;
 }

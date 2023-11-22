@@ -4,26 +4,26 @@ const questions = ['Какие основные формы юридически�
 const url = "http://0.0.0.0:5000/model";
 
 
-// Simplified text preprocessing: Just split and join for this example.
-// More complex preprocessing will need additional tools or APIs.
+
 function preprocess_text(text) {
     return text.split(' ').join(' ');
 }
 
-// Get term frequency of a term in a document
+// Getting frequency of a term in a document
 function termFrequency(term, document) {
     const wordArray = document.split(' ');
     const termCount = wordArray.filter(word => word === term).length;
     return termCount / wordArray.length;
 }
 
-// Inverse Document Frequency: log(total number of documents / number of documents with term in it)
+// Getting number of documents with the term
 function inverseDocumentFrequency(term, documents) {
     const numDocumentsWithTerm = documents.filter(document => document.includes(term)).length;
     if (numDocumentsWithTerm === 0) return 0;
     return Math.log(documents.length / numDocumentsWithTerm);
 }
 
+//Getting a context based on a question
 function get_context(input_question) {
     const preprocessed_input = preprocess_text(input_question);
     const terms = preprocessed_input.split(' ');
@@ -38,11 +38,12 @@ function get_context(input_question) {
         return score;
     });
     
-    // Find the index of the highest score
+    // based on a highest score get context
     const matched_index = scores.indexOf(Math.max(...scores));
     return contexts[matched_index];
 }
 
+// for making typing effect, indexTextEffect-counter of letters in a sentence
 var indexTexEffect = 0;
 txt = ""
 var speed = 50;
@@ -59,7 +60,7 @@ function typeWriter() {
 
 
 
-//Function to execute when button is clicked
+
 function fetchData() {
     questionValue = document.getElementById('questionInput').value;
     
