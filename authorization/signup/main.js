@@ -18,7 +18,7 @@ document.getElementById('registerForm').addEventListener('submit', async functio
             window.location.replace('https://zan-wheat.vercel.app/authorization/mainpage/main-page.html');
         } else {
             console.error('Registration failed');
-            console.log(response)
+            console.log(response.status)
         }
     } catch (error) {
         console.error('Error:', error);
