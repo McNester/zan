@@ -5,6 +5,7 @@ const url = "http://0.0.0.0:5000/model";
 
 
 
+
 function preprocess_text(text) {
     return text.split(' ').join(' ');
 }
@@ -42,6 +43,19 @@ function get_context(input_question) {
     const matched_index = scores.indexOf(Math.max(...scores));
     return contexts[matched_index];
 }
+//SPINNER START
+function startSpinner(){
+    var spinnerContainer = document.getElementById('spinnerContainer');
+
+    spinnerContainer.style.opacity = '1';
+
+}
+function stopSpinner(){
+    var spinnerContainer = document.getElementById('spinnerContainer');
+    spinnerContainer.style.opacity = '0';
+
+}
+//SPINNER END
 
 // for making typing effect, indexTextEffect-counter of letters in a sentence
 var indexTexEffect = 0;
@@ -62,6 +76,7 @@ function typeWriter() {
 
 
 function fetchData() {
+    startSpinner();
     questionValue = document.getElementById('questionInput').value;
     
     contextValue = get_context(questionValue)
@@ -73,9 +88,12 @@ function fetchData() {
             answer = JSON.stringify(response.data[0][0], null, 2);
             //document.getElementById('responseOutput').textContent = JSON.stringify(response.data[0][0].slice(1,-1), null, 2);
             document.getElementById('responseOutput').textContent = ""
+            stopSpinner();
             txt = answer.slice(1,-1)
             typeWriter();
             indexTexEffect = 0;
+            //
+
             
         })
         .catch(error => {
@@ -85,5 +103,12 @@ function fetchData() {
 }
 
 
-document.getElementById('submitButton').addEventListener('click', fetchData);
+
+
+document.getElementById('questionInput').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        console.log('Enter key was pressed');
+        fetchData();
+    }
+});
 

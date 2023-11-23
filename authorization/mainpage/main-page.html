@@ -1,55 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZanAI</title>
+    <title>
+        ZanAI
+    </title>
     <link rel="stylesheet" type="text/css" href="mainpage-style/main-page.css"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Raleway&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:wght@100;200;300;400;500;700&display=swap"
+        rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Введите свой запрос</h1>
-    </header>
-    <main>
-        <div class="container">
-            <div class="contentBlock">
-            </div>
-            <div class="InputPart">
 
-                <input id="questionInput" type="text" class="InputText"/>
-                <button id="submitButton">Отправить</button>
-            </div>
-
-        </div>
-        <div id="responseContainer" >
-            
-            <div id="responseOutput">
-                
-            </div>
-
-        </div>
-    </main>
-    <div class="LinkBackBlock">
-        <a href="../../index.html" class="LinkBack">
-            Назад
-        </a>
-        
-        
+<body class="flex justify-between items-center flex-col scrolling-background bg-[#180040] py-10">
+    
+    <div id="spinnerContainer" class="flex justify-center items-center absolute top-0 left-0 m-5">
+        <div class="spinner"></div>
     </div>
 
 
+    <h1 class="text-5xl text-white font-bold">
+        Введите Свой запрос
+    </h1>
 
+
+    <div id="responseContainer" class="flex justify-center items-center w-[65%] py-10" >
+            
+        <div id="responseOutput" class="text-white font-thin text-center text-lg">
+        
+        </div>
+
+    </div>
+
+    
+
+    <input id="questionInput" type="text" class="w-[90%] h-[4rem] text-white text-xl pl-5 "/>
+    
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
     <script src="script3.js"></script> 
 
+
 </body>
+
 </html>
+
+
+
+
+
+
+<!--
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ZanAI</title>
+        <link rel="stylesheet" type="text/css" href="mainpage-style/main-page.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Raleway&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <header>
+            <h1>Введите свой запрос</h1>
+        </header>
+        <main>
+            <div class="container">
+                <div class="contentBlock">
+                </div>
+                <div class="InputPart">
+    
+                    <input id="questionInput" type="text" class="InputText"/>
+                    <button id="submitButton">Отправить</button>
+                </div>
+    
+            </div>
+            <div id="responseContainer" >
+                
+                <div id="responseOutput">
+                    
+                </div>
+    
+            </div>
+        </main>
+        <div class="LinkBackBlock">
+            <a href="../../index.html" class="LinkBack">
+                Назад
+            </a>
+            
+            
+        </div>
+    
+    
+    
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+        <script src="script3.js"></script> 
+    
+    </body>
+    </html>
+-->

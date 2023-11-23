@@ -1,0 +1,54 @@
+
+@keyframes changeBackground {
+    0% { background-image: url('/asset/img/mainBack2.png'); }
+    40% { background-image: url('/asset/img/mainBack2thck1.png'); }
+    60% { background-image: url('/asset/img/mainBack2thck2.png'); }
+    80% { background-image: url('/asset/img/mainBack2thck1.png'); }
+    100% { background-image: url('/asset/img/mainBack2.png'); }
+}
+
+body{
+
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+
+    height: 100vh;
+    width: 100vw;
+
+    overflow: hidden;
+
+    font-family: 'Ubuntu', sans-serif;
+
+    animation: changeBackground 10s infinite;
+}
+
+
+
+
+
+
+body > button{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    transition: all 0.5s ease;
+}
+
+
+input{
+    background-color: rgba(0, 0, 0, 0.14);
+    outline: none;
+    transition: all 0.5s ease;
+    backdrop-filter: blur(0.15rem);
+
+}
+
+input:focus{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#responseOutput{
+    transition: all 1s ease;
+}
+#responseOutput:hover{
+    transform: scale(1.2);
+}

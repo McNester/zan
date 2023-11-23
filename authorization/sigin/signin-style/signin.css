@@ -1,16 +1,144 @@
 body{
+    background-image: url("/asset/img/back2.png");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 100vh;
+    width: 100vw;
+
+    overflow: hidden;
+
+    font-family: 'Ubuntu', sans-serif;
+}
+
+button{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    transition: all 0.5s ease;
+}
+
+#firstTimeBtn:hover{
+    transform: scale(1.1);
+}
+
+.form{
+    background-color: rgba(0, 0, 0, 0.14);
+    outline: none;
+
+}
+
+
+
+#registerForm{
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+
+
+
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+  
+.spinner {
+    border: 0.4rem solid #f3f3f3; /* Light grey border */
+    border-top: 0.4rem solid rgb(71, 71, 255); /* Blue border for the spinner top */
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    animation: spin 2s linear infinite;
+    
+}
+#spinnerContainer{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+@keyframes scrollBackground {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 100%;
+    }
+}
+  
+.scrolling-background {
+    background-repeat: repeat-y;
+    animation: scrollBackground 80s linear infinite;
+}
+  
+
+
+#responseContainer {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*body{
     left: 0;
     top: 0;
     margin: auto;
     width: 100%;
     max-width: 100%;
     background: #0B1116;
+    overflow-x: hidden;
 }
+
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+
+
+.spinner {
+    border: 0.4rem solid #f3f3f3; 
+    border-top: 0.4rem solid rgb(71, 71, 255); 
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    animation: spin 2s linear infinite;
+    
+}
+
+#spinnerContainer{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+
+
+
 main{
-    padding-top: 5%;
+    padding-top: 1%;
     padding-left: 30%;
     padding-right: 30%;
-    /* padding-bottom: ; */
+
 }
 .container{
     width: 37.5rem;
@@ -72,7 +200,6 @@ form button:hover{
     background-color: #2F3C4C;
 }
 
-
 .LinkReg{
     text-align: center;
     margin-top: 3rem;
@@ -85,11 +212,6 @@ form button:hover{
     transition: all 300ms;
     text-decoration: none;
 }
-
-.LinkReg:hover{
-    background-color: #2F3C4C;
-}
-
 
 .LinkBackBlock{
     display: flex;
@@ -109,3 +231,21 @@ form button:hover{
     border-radius: 5px;
     margin-left: 40%;             
 }
+
+
+.LinkReg, .LinkBack:hover{
+    background-color: #2F3C4C;
+}
+
+.LinkBack{
+    
+}
+
+#responseContainer {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+
+}
+
+*/
