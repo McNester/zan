@@ -49,6 +49,7 @@ input:focus{
 
 #responseOutput{
     transition: all 1s ease;
+
 }
 #responseOutput:hover{
     transform: scale(1.07);
